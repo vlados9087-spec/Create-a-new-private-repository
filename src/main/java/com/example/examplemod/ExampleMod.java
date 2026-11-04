@@ -46,7 +46,7 @@ public class ExampleMod {
         IEventBus modEventBus = context.getModEventBus();
 
         ITEMS.register(modEventBus);
-        ENTITIES.register(modEventBus);
+        ENTITIES.register(modEventBus);PumaNetwork.register();
 
         modEventBus.addListener(this::addCreative);
         context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
