@@ -34,12 +34,23 @@ public class PumaClientInput {
 
         if (driving) {
 
+            // Tractor movement
             PumaNetwork.sendControls(
                     minecraft.options.keyUp.isDown(),
                     minecraft.options.keyDown.isDown(),
                     minecraft.options.keyLeft.isDown(),
                     minecraft.options.keyRight.isDown()
             );
+
+            // Raise rear hitch with R
+            while (PumaKeyBindings.HITCH_RAISE.consumeClick()) {
+                PumaNetwork.sendHitchCommand(true);
+            }
+
+            // Lower rear hitch with V
+            while (PumaKeyBindings.HITCH_LOWER.consumeClick()) {
+                PumaNetwork.sendHitchCommand(false);
+            }
 
             wasDriving = true;
 
@@ -56,3 +67,4 @@ public class PumaClientInput {
         }
     }
 }
+

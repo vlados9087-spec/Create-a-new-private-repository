@@ -40,7 +40,9 @@ public class ExampleMod {
 
     public static final RegistryObject<Item> CASE_IH_PUMA =
             ITEMS.register("case_ih_puma",
-                    () -> new Item(new Item.Properties().stacksTo(1)));
+                    () -> new CaseIhPumaItem(
+                            new Item.Properties().stacksTo(1)
+                    ));
 
     public ExampleMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
@@ -54,7 +56,6 @@ public class ExampleMod {
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
         if (event.getTab() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-            event.accept(CASE_IH_PUMA);
-        }
+            event.accept(CASE_IH_PUMA);        }
     }
 }

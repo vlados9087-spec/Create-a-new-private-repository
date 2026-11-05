@@ -23,12 +23,21 @@ public class PumaNetwork {
             );
 
     public static void register() {
+
         CHANNEL.registerMessage(
                 0,
                 ControlsPacket.class,
                 ControlsPacket::encode,
                 ControlsPacket::new,
                 ControlsPacket::handle
+        );
+
+        CHANNEL.registerMessage(
+                1,
+                HitchPacket.class,
+                HitchPacket::encode,
+                HitchPacket::new,
+                HitchPacket::handle
         );
     }
 
@@ -41,6 +50,10 @@ public class PumaNetwork {
         CHANNEL.sendToServer(
                 new ControlsPacket(forward, brake, left, right)
         );
+    }
+
+    public static void sendHitchCommand(boolean raise) {
+        CHANNEL.sendToServer(new HitchPacket(raise));
     }
 
     public static class ControlsPacket {
@@ -106,4 +119,49 @@ public class PumaNetwork {
             context.setPacketHandled(true);
         }
     }
+
+    public static class HitchPacket {
+
+        private final boolean raise;
+
+        public HitchPacket(boolean raise) {
+            this.raise = raise;
+        }
+
+        public HitchPacket(FriendlyByteBuf buffer) {
+            this(buffer.readBoolean());
+        }
+
+        public void encode(FriendlyByteBuf buffer) {
+            buffer.writeBoolean(raise);
+        }
+
+        public static void handle(
+                HitchPacket packet,
+                Supplier<NetworkEvent.Context> supplier
+        ) {
+            NetworkEvent.Context context = supplier.get();
+
+            context.enqueueWork(() -> {
+                ServerPlayer player = context.getSender();
+
+                if (player == null) {
+                    return;
+                }
+
+                if (player.getVehicle() instanceof CaseIhPumaEntity tractor
+                        && tractor.getControllingPassenger() == player) {
+
+                    if (packet.raise) {
+                        tractor.raiseHitch();
+                    } else {
+                        tractor.lowerHitch();
+                    }
+                }
+            });
+
+            context.setPacketHandled(true);
+        }
+    }
 }
+
