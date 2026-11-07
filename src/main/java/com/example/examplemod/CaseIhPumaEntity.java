@@ -74,12 +74,31 @@ public class CaseIhPumaEntity extends Entity {
             EntityType<? extends CaseIhPumaEntity> type,
             Level level
     ) {
-        super(type, level);
+        super(type, level);this.blocksBuilding = true;
         setNoGravity(true);
     }
 
-    // ---------------- DRIVER ----------------
+    @Override
+public boolean canBeCollidedWith() {
+    return true;
+}
 
+@Override
+public boolean isPushable() {
+    return true;
+}
+
+    // ---------------- DRIVER ----------------
+@Override
+protected boolean couldAcceptPassenger() {
+    return true;
+}
+
+@Override
+protected boolean canAddPassenger(Entity passenger) {
+    return passenger instanceof Player
+            && getPassengers().isEmpty();
+}
     @Override
     public double getPassengersRidingOffset() {
         return 1.2D;
@@ -443,11 +462,21 @@ public class CaseIhPumaEntity extends Entity {
 
         double movementSpeed = speedFactor * 0.694;
 
-        setDeltaMovement(direction.scale(movementSpeed));
+Vec3 velocity = getDeltaMovement();
 
-        move(MoverType.SELF, getDeltaMovement());
+double verticalVelocity = isOnGround()
+        ? 0.0D
+        : Math.max(-3.92D, velocity.y - 0.08D);
 
-        setNoGravity(true);
+setDeltaMovement(new Vec3(
+        direction.x * movementSpeed,
+        verticalVelocity,
+        direction.z * movementSpeed
+));
+
+move(MoverType.SELF, getDeltaMovement());
+
+    
 
         // Keep attached equipment behind the tractor
         updateAttachedImplement();

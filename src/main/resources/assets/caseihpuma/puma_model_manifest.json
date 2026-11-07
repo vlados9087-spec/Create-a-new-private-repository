@@ -1,0 +1,1714 @@
+{
+  "parts": [
+    {
+      "node": 0,
+      "name": "mesh",
+      "mesh": 0,
+      "material": 0,
+      "image": 0,
+      "translation": [
+        0,
+        0,
+        -0.0625
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 1,
+      "name": "mesh",
+      "mesh": 1,
+      "material": 1,
+      "image": 1,
+      "translation": [
+        0,
+        0.125,
+        -0.21875
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 2,
+      "name": "cylinder",
+      "mesh": 2,
+      "material": 2,
+      "image": 2,
+      "translation": [
+        -0.25,
+        0.25,
+        0.1875
+      ],
+      "rotation": [
+        0.5,
+        -0.4999999999999999,
+        0.5,
+        0.5000000000000001
+      ]
+    },
+    {
+      "node": 3,
+      "name": "cylinder",
+      "mesh": 3,
+      "material": 3,
+      "image": 3,
+      "translation": [
+        0.375,
+        0.25,
+        0.1875
+      ],
+      "rotation": [
+        0.5,
+        -0.4999999999999999,
+        0.5,
+        0.5000000000000001
+      ]
+    },
+    {
+      "node": 4,
+      "name": "mesh",
+      "mesh": 4,
+      "material": 4,
+      "image": 4,
+      "translation": [
+        0,
+        0.1875,
+        0.1875
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 5,
+      "name": "mesh",
+      "mesh": 5,
+      "material": 5,
+      "image": 5,
+      "translation": [
+        0,
+        0.125,
+        -0.3125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 6,
+      "name": "cylinder",
+      "mesh": 6,
+      "material": 6,
+      "image": 6,
+      "translation": [
+        0.375,
+        0.1875,
+        -0.3125
+      ],
+      "rotation": [
+        0.5,
+        -0.4999999999999999,
+        0.5,
+        0.5000000000000001
+      ]
+    },
+    {
+      "node": 7,
+      "name": "cylinder",
+      "mesh": 7,
+      "material": 7,
+      "image": 7,
+      "translation": [
+        -0.25,
+        0.1875,
+        -0.3125
+      ],
+      "rotation": [
+        0.5,
+        -0.4999999999999999,
+        0.5,
+        0.5000000000000001
+      ]
+    },
+    {
+      "node": 8,
+      "name": "cylinder",
+      "mesh": 8,
+      "material": 8,
+      "image": 8,
+      "translation": [
+        0.21875,
+        0.5,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 9,
+      "name": "cylinder",
+      "mesh": 9,
+      "material": 9,
+      "image": 9,
+      "translation": [
+        0.28125,
+        0.625,
+        -0.0625
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 10,
+      "name": "cylinder",
+      "mesh": 10,
+      "material": 10,
+      "image": 10,
+      "translation": [
+        0.275,
+        0.65625,
+        -0.0625
+      ],
+      "rotation": [
+        -0.38097742511666594,
+        0.26450463240267746,
+        -0.0935036759660648,
+        0.8809940769209704
+      ]
+    },
+    {
+      "node": 11,
+      "name": "cylinder",
+      "mesh": 11,
+      "material": 11,
+      "image": 11,
+      "translation": [
+        0.2375,
+        0.6625,
+        -0.0625
+      ],
+      "rotation": [
+        -0.5047726068272022,
+        0.4611532194618662,
+        -0.3701145882396684,
+        0.6289336333421894
+      ]
+    },
+    {
+      "node": 12,
+      "name": "mesh",
+      "mesh": 12,
+      "material": 12,
+      "image": 12,
+      "translation": [
+        0,
+        0.40625,
+        -0.125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 13,
+      "name": "mesh",
+      "mesh": 13,
+      "material": 13,
+      "image": 13,
+      "translation": [
+        0,
+        0.40625,
+        -0.1875
+      ],
+      "rotation": [
+        -0.06540312923014306,
+        0,
+        0,
+        0.9978589232386035
+      ]
+    },
+    {
+      "node": 14,
+      "name": "mesh",
+      "mesh": 14,
+      "material": 14,
+      "image": 14,
+      "translation": [
+        0,
+        0.4,
+        -0.25
+      ],
+      "rotation": [
+        -0.10886687485196457,
+        0,
+        0,
+        0.9940563382223196
+      ]
+    },
+    {
+      "node": 15,
+      "name": "mesh",
+      "mesh": 15,
+      "material": 15,
+      "image": 15,
+      "translation": [
+        0,
+        0.38125,
+        -0.3125
+      ],
+      "rotation": [
+        -0.13052619222005157,
+        0,
+        0,
+        0.9914448613738104
+      ]
+    },
+    {
+      "node": 16,
+      "name": "mesh",
+      "mesh": 16,
+      "material": 16,
+      "image": 16,
+      "translation": [
+        0,
+        0.36875,
+        -0.375
+      ],
+      "rotation": [
+        -0.13052619222005157,
+        0,
+        0,
+        0.9914448613738104
+      ]
+    },
+    {
+      "node": 17,
+      "name": "mesh",
+      "mesh": 17,
+      "material": 17,
+      "image": 17,
+      "translation": [
+        0,
+        0.35,
+        -0.4125
+      ],
+      "rotation": [
+        -0.25881904510252074,
+        0,
+        0,
+        0.9659258262890683
+      ]
+    },
+    {
+      "node": 18,
+      "name": "mesh",
+      "mesh": 18,
+      "material": 18,
+      "image": 18,
+      "translation": [
+        0,
+        0.35,
+        -0.4125
+      ],
+      "rotation": [
+        -0.766044443118978,
+        0,
+        0,
+        0.6427876096865394
+      ]
+    },
+    {
+      "node": 19,
+      "name": "mesh",
+      "mesh": 19,
+      "material": 19,
+      "image": 19,
+      "translation": [
+        0,
+        0.2875,
+        -0.4
+      ],
+      "rotation": [
+        -0.7223639620597555,
+        0,
+        0,
+        0.6915130557822694
+      ]
+    },
+    {
+      "node": 20,
+      "name": "mesh",
+      "mesh": 20,
+      "material": 20,
+      "image": 20,
+      "translation": [
+        -0.3125,
+        0.3875,
+        0.1875
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 21,
+      "name": "mesh",
+      "mesh": 21,
+      "material": 21,
+      "image": 21,
+      "translation": [
+        0.3125,
+        0.3875,
+        0.1875
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 22,
+      "name": "mesh",
+      "mesh": 22,
+      "material": 22,
+      "image": 22,
+      "translation": [
+        -0.3125,
+        0.36875,
+        0.03125
+      ],
+      "rotation": [
+        -0.27982901403099203,
+        0,
+        0,
+        0.9600498543859287
+      ]
+    },
+    {
+      "node": 23,
+      "name": "mesh",
+      "mesh": 23,
+      "material": 23,
+      "image": 23,
+      "translation": [
+        0.3125,
+        0.36875,
+        0.03125
+      ],
+      "rotation": [
+        -0.27982901403099203,
+        0,
+        0,
+        0.9600498543859287
+      ]
+    },
+    {
+      "node": 24,
+      "name": "mesh",
+      "mesh": 24,
+      "material": 24,
+      "image": 24,
+      "translation": [
+        -0.3125,
+        0.4625,
+        0.4125
+      ],
+      "rotation": [
+        -0.9469301294951057,
+        0,
+        0,
+        0.3214394653031615
+      ]
+    },
+    {
+      "node": 25,
+      "name": "mesh",
+      "mesh": 25,
+      "material": 25,
+      "image": 25,
+      "translation": [
+        0.3125,
+        0.4625,
+        0.4125
+      ],
+      "rotation": [
+        -0.9469301294951057,
+        0,
+        0,
+        0.3214394653031615
+      ]
+    },
+    {
+      "node": 26,
+      "name": "mesh",
+      "mesh": 26,
+      "material": 26,
+      "image": 26,
+      "translation": [
+        0.1875,
+        0.23125,
+        -0.0625
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 27,
+      "name": "mesh",
+      "mesh": 27,
+      "material": 27,
+      "image": 27,
+      "translation": [
+        -0.1875,
+        0.23125,
+        -0.0625
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 28,
+      "name": "mesh",
+      "mesh": 28,
+      "material": 28,
+      "image": 28,
+      "translation": [
+        -0.09375,
+        0.3125,
+        -0.1875
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 29,
+      "name": "mesh",
+      "mesh": 29,
+      "material": 29,
+      "image": 29,
+      "translation": [
+        0.09375,
+        0.3125,
+        -0.1875
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 30,
+      "name": "mesh",
+      "mesh": 30,
+      "material": 30,
+      "image": 30,
+      "translation": [
+        0.15625,
+        0.21875,
+        0.375
+      ],
+      "rotation": [
+        0.5702424483288387,
+        -0.5702424483288386,
+        0.418119062138922,
+        0.4181190621389221
+      ]
+    },
+    {
+      "node": 31,
+      "name": "mesh",
+      "mesh": 31,
+      "material": 31,
+      "image": 31,
+      "translation": [
+        -0.09375,
+        0.21875,
+        0.375
+      ],
+      "rotation": [
+        0.5702424483288387,
+        -0.5702424483288386,
+        0.418119062138922,
+        0.4181190621389221
+      ]
+    },
+    {
+      "node": 32,
+      "name": "cylinder",
+      "mesh": 32,
+      "material": 32,
+      "image": 32,
+      "translation": [
+        -0.125,
+        0.26875,
+        0.4375
+      ],
+      "rotation": [
+        -0.19509032201612825,
+        0,
+        0,
+        0.9807852804032304
+      ]
+    },
+    {
+      "node": 33,
+      "name": "cylinder",
+      "mesh": 33,
+      "material": 33,
+      "image": 33,
+      "translation": [
+        0.125,
+        0.26875,
+        0.4375
+      ],
+      "rotation": [
+        -0.19509032201612825,
+        0,
+        0,
+        0.9807852804032304
+      ]
+    },
+    {
+      "node": 34,
+      "name": "cylinder",
+      "mesh": 34,
+      "material": 34,
+      "image": 34,
+      "translation": [
+        -0.125,
+        0.3875,
+        0.3125
+      ],
+      "rotation": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "node": 35,
+      "name": "cylinder",
+      "mesh": 35,
+      "material": 35,
+      "image": 35,
+      "translation": [
+        0.125,
+        0.3875,
+        0.3125
+      ],
+      "rotation": [
+        0.7071067811865475,
+        0,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "node": 36,
+      "name": "mesh",
+      "mesh": 36,
+      "material": 36,
+      "image": 36,
+      "translation": [
+        0,
+        0.1875,
+        0.3125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 37,
+      "name": "mesh",
+      "mesh": 37,
+      "material": 37,
+      "image": 37,
+      "translation": [
+        0.01875,
+        0.19375,
+        0.375
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 38,
+      "name": "mesh",
+      "mesh": 38,
+      "material": 38,
+      "image": 38,
+      "translation": [
+        0,
+        0.19375,
+        0.40625
+      ],
+      "rotation": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "node": 39,
+      "name": "mesh",
+      "mesh": 39,
+      "material": 39,
+      "image": null,
+      "translation": [
+        0.01875,
+        0.19375,
+        0.375
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 40,
+      "name": "mesh",
+      "mesh": 40,
+      "material": 40,
+      "image": 39,
+      "translation": [
+        -0.01875,
+        0.19375,
+        0.375
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 41,
+      "name": "mesh",
+      "mesh": 41,
+      "material": 41,
+      "image": 40,
+      "translation": [
+        0,
+        0.3125,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 42,
+      "name": "mesh",
+      "mesh": 42,
+      "material": 42,
+      "image": 41,
+      "translation": [
+        -0.125,
+        0.4375,
+        0.3125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 43,
+      "name": "mesh",
+      "mesh": 43,
+      "material": 43,
+      "image": 42,
+      "translation": [
+        -0.125,
+        0.4375,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 44,
+      "name": "mesh",
+      "mesh": 44,
+      "material": 44,
+      "image": 43,
+      "translation": [
+        -0.125,
+        0.4375,
+        0
+      ],
+      "rotation": [
+        0,
+        0.3007057995042731,
+        0,
+        0.9537169507482269
+      ]
+    },
+    {
+      "node": 45,
+      "name": "mesh",
+      "mesh": 45,
+      "material": 45,
+      "image": 44,
+      "translation": [
+        0.125,
+        0.4375,
+        0.3125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 46,
+      "name": "mesh",
+      "mesh": 46,
+      "material": 46,
+      "image": 45,
+      "translation": [
+        0.125,
+        0.4375,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 47,
+      "name": "mesh",
+      "mesh": 47,
+      "material": 47,
+      "image": 46,
+      "translation": [
+        0.125,
+        0.4375,
+        0
+      ],
+      "rotation": [
+        0,
+        0.3007057995042731,
+        0,
+        0.9537169507482269
+      ]
+    },
+    {
+      "node": 48,
+      "name": "mesh",
+      "mesh": 48,
+      "material": 48,
+      "image": 47,
+      "translation": [
+        0,
+        0.3125,
+        0.3125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 49,
+      "name": "mesh",
+      "mesh": 49,
+      "material": 49,
+      "image": null,
+      "translation": [
+        0.09375,
+        0.4375,
+        0.34375
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 50,
+      "name": "mesh",
+      "mesh": 50,
+      "material": 50,
+      "image": 48,
+      "translation": [
+        0.125,
+        0.53125,
+        0.28125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 51,
+      "name": "mesh",
+      "mesh": 51,
+      "material": 51,
+      "image": 49,
+      "translation": [
+        0.125,
+        0.4,
+        0.3125
+      ],
+      "rotation": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "node": 52,
+      "name": "mesh",
+      "mesh": 52,
+      "material": 52,
+      "image": 50,
+      "translation": [
+        0.125,
+        0.53125,
+        0.3125
+      ],
+      "rotation": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "node": 53,
+      "name": "mesh",
+      "mesh": 53,
+      "material": 53,
+      "image": 51,
+      "translation": [
+        0.125,
+        0.53125,
+        0
+      ],
+      "rotation": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "node": 54,
+      "name": "mesh",
+      "mesh": 54,
+      "material": 54,
+      "image": 52,
+      "translation": [
+        -0.125,
+        0.53125,
+        0.28125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 55,
+      "name": "mesh",
+      "mesh": 55,
+      "material": 55,
+      "image": 53,
+      "translation": [
+        -0.125,
+        0.28125,
+        0.28125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 56,
+      "name": "mesh",
+      "mesh": 56,
+      "material": 56,
+      "image": 54,
+      "translation": [
+        0.125,
+        0.28125,
+        0.28125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 57,
+      "name": "mesh",
+      "mesh": 57,
+      "material": 49,
+      "image": null,
+      "translation": [
+        0.00625,
+        0.40625,
+        0.34375
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 58,
+      "name": "mesh",
+      "mesh": 58,
+      "material": 49,
+      "image": null,
+      "translation": [
+        0.00625,
+        0.45625,
+        0.34375
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 59,
+      "name": "mesh",
+      "mesh": 59,
+      "material": 49,
+      "image": null,
+      "translation": [
+        0.00625,
+        0.40625,
+        0.34375
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 60,
+      "name": "mesh",
+      "mesh": 60,
+      "material": 49,
+      "image": null,
+      "translation": [
+        0.00625,
+        0.46875,
+        0.34375
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 61,
+      "name": "mesh",
+      "mesh": 61,
+      "material": 49,
+      "image": null,
+      "translation": [
+        0.00625,
+        0.425,
+        0.20625
+      ],
+      "rotation": [
+        0.7933533402912352,
+        0,
+        0,
+        0.6087614290087207
+      ]
+    },
+    {
+      "node": 62,
+      "name": "mesh",
+      "mesh": 62,
+      "material": 49,
+      "image": null,
+      "translation": [
+        -0.09375,
+        0.4375,
+        0.34375
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 63,
+      "name": "mesh",
+      "mesh": 63,
+      "material": 57,
+      "image": null,
+      "translation": [
+        0,
+        0.4375,
+        0.03125
+      ],
+      "rotation": [
+        0.23768589232617307,
+        0,
+        0,
+        0.9713420698132614
+      ]
+    },
+    {
+      "node": 64,
+      "name": "cylinder",
+      "mesh": 64,
+      "material": 58,
+      "image": null,
+      "translation": [
+        0,
+        0.48125,
+        0.05625
+      ],
+      "rotation": [
+        0.23087430661751696,
+        -0.23087430661751696,
+        -0.056494583410889136,
+        0.9435054165891108
+      ]
+    },
+    {
+      "node": 65,
+      "name": "mesh",
+      "mesh": 65,
+      "material": 39,
+      "image": null,
+      "translation": [
+        0.03125,
+        0.4375,
+        0.0625
+      ],
+      "rotation": [
+        0.46174861323503386,
+        0,
+        0,
+        0.8870108331782217
+      ]
+    },
+    {
+      "node": 66,
+      "name": "mesh",
+      "mesh": 66,
+      "material": 39,
+      "image": null,
+      "translation": [
+        0.075,
+        0.4375,
+        0.0625
+      ],
+      "rotation": [
+        0.45779828983835735,
+        -0.06027028824845828,
+        0.11577814651268867,
+        0.8794223325374501
+      ]
+    },
+    {
+      "node": 67,
+      "name": "mesh",
+      "mesh": 67,
+      "material": 39,
+      "image": null,
+      "translation": [
+        -0.03125,
+        0.4375,
+        0.0625
+      ],
+      "rotation": [
+        0.46174861323503386,
+        0,
+        0,
+        0.8870108331782217
+      ]
+    },
+    {
+      "node": 68,
+      "name": "mesh",
+      "mesh": 68,
+      "material": 59,
+      "image": 55,
+      "translation": [
+        0,
+        0.65625,
+        0.15625
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 69,
+      "name": "mesh",
+      "mesh": 69,
+      "material": 60,
+      "image": 56,
+      "translation": [
+        0.2,
+        0.15625,
+        -0.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 70,
+      "name": "mesh",
+      "mesh": 70,
+      "material": 61,
+      "image": 57,
+      "translation": [
+        -0.2125,
+        0.15625,
+        -0.25
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 71,
+      "name": "mesh",
+      "mesh": 71,
+      "material": 62,
+      "image": 58,
+      "translation": [
+        0.30625,
+        0.16875,
+        -0.15625
+      ],
+      "rotation": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "node": 72,
+      "name": "mesh",
+      "mesh": 72,
+      "material": 63,
+      "image": 59,
+      "translation": [
+        -0.31875,
+        0.16875,
+        -0.15625
+      ],
+      "rotation": [
+        0,
+        0.7071067811865475,
+        0,
+        0.7071067811865476
+      ]
+    },
+    {
+      "node": 73,
+      "name": "mesh",
+      "mesh": 73,
+      "material": 64,
+      "image": 60,
+      "translation": [
+        0.30625,
+        0.325,
+        -0.4375
+      ],
+      "rotation": [
+        0.5,
+        0.5,
+        0.4999999999999999,
+        0.5000000000000001
+      ]
+    },
+    {
+      "node": 74,
+      "name": "mesh",
+      "mesh": 74,
+      "material": 65,
+      "image": 61,
+      "translation": [
+        -0.31875,
+        0.325,
+        -0.4375
+      ],
+      "rotation": [
+        0.5,
+        0.5,
+        0.4999999999999999,
+        0.5000000000000001
+      ]
+    },
+    {
+      "node": 75,
+      "name": "mesh",
+      "mesh": 75,
+      "material": 66,
+      "image": 62,
+      "translation": [
+        0.30625,
+        0.25,
+        -0.16875
+      ],
+      "rotation": [
+        -0.22729202565684353,
+        0.6695807158758448,
+        -0.2272920256568435,
+        0.6695807158758449
+      ]
+    },
+    {
+      "node": 76,
+      "name": "mesh",
+      "mesh": 76,
+      "material": 67,
+      "image": 63,
+      "translation": [
+        -0.31875,
+        0.25,
+        -0.16875
+      ],
+      "rotation": [
+        -0.22729202565684353,
+        0.6695807158758448,
+        -0.2272920256568435,
+        0.6695807158758449
+      ]
+    },
+    {
+      "node": 77,
+      "name": "cylinder",
+      "mesh": 77,
+      "material": 68,
+      "image": 64,
+      "translation": [
+        0.125,
+        0.6875,
+        0.03125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 78,
+      "name": "sphere",
+      "mesh": 78,
+      "material": 69,
+      "image": 65,
+      "translation": [
+        0.125,
+        0.75,
+        0.03125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 79,
+      "name": "mesh",
+      "mesh": 79,
+      "material": 70,
+      "image": 66,
+      "translation": [
+        0,
+        0.425,
+        -0.125
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 80,
+      "name": "mesh",
+      "mesh": 80,
+      "material": 71,
+      "image": 67,
+      "translation": [
+        0,
+        0.425,
+        -0.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 81,
+      "name": "mesh",
+      "mesh": 81,
+      "material": 72,
+      "image": 68,
+      "translation": [
+        0,
+        0.425,
+        -0.21875
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 82,
+      "name": "mesh",
+      "mesh": 82,
+      "material": 73,
+      "image": 69,
+      "translation": [
+        0.09375,
+        0.1875,
+        -0.5
+      ],
+      "rotation": [
+        0.21643961393810288,
+        0,
+        0,
+        0.9762960071199334
+      ]
+    },
+    {
+      "node": 83,
+      "name": "mesh",
+      "mesh": 83,
+      "material": 74,
+      "image": 70,
+      "translation": [
+        0.09375,
+        0.15625,
+        -0.375
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 84,
+      "name": "mesh",
+      "mesh": 84,
+      "material": 75,
+      "image": 71,
+      "translation": [
+        -0.09375,
+        0.15625,
+        -0.375
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": 85,
+      "name": "mesh",
+      "mesh": 85,
+      "material": 76,
+      "image": 72,
+      "translation": [
+        -0.09375,
+        0.1875,
+        -0.5
+      ],
+      "rotation": [
+        0.21643961393810288,
+        0,
+        0,
+        0.9762960071199334
+      ]
+    },
+    {
+      "node": 86,
+      "name": "mesh",
+      "mesh": 86,
+      "material": 77,
+      "image": 73,
+      "translation": [
+        -0.09375,
+        0.20625,
+        -0.5625
+      ],
+      "rotation": [
+        0.21643961393810288,
+        0,
+        0,
+        0.9762960071199334
+      ]
+    },
+    {
+      "node": 87,
+      "name": "mesh",
+      "mesh": 87,
+      "material": 78,
+      "image": 74,
+      "translation": [
+        0.09375,
+        0.20625,
+        -0.5625
+      ],
+      "rotation": [
+        0.21643961393810288,
+        0,
+        0,
+        0.9762960071199334
+      ]
+    },
+    {
+      "node": 88,
+      "name": "mesh",
+      "mesh": 88,
+      "material": 79,
+      "image": 75,
+      "translation": [
+        0,
+        0.31875,
+        -0.53125
+      ],
+      "rotation": [
+        0.21643961393810288,
+        0,
+        0,
+        0.9762960071199334
+      ]
+    },
+    {
+      "node": 89,
+      "name": "mesh",
+      "mesh": 89,
+      "material": 80,
+      "image": 76,
+      "translation": [
+        0.09375,
+        0.225,
+        -0.56875
+      ],
+      "rotation": [
+        0.21643961393810288,
+        0,
+        0,
+        0.9762960071199334
+      ]
+    },
+    {
+      "node": 90,
+      "name": "mesh",
+      "mesh": 90,
+      "material": 81,
+      "image": 77,
+      "translation": [
+        0,
+        0.33125,
+        -0.54375
+      ],
+      "rotation": [
+        0.21643961393810288,
+        0,
+        0,
+        0.9762960071199334
+      ]
+    },
+    {
+      "node": 91,
+      "name": "mesh",
+      "mesh": 91,
+      "material": 82,
+      "image": 78,
+      "translation": [
+        -0.09375,
+        0.225,
+        -0.56875
+      ],
+      "rotation": [
+        0.21643961393810288,
+        0,
+        0,
+        0.9762960071199334
+      ]
+    },
+    {
+      "node": 92,
+      "name": "cylinder",
+      "mesh": 92,
+      "material": 83,
+      "image": 79,
+      "translation": [
+        0.09375,
+        0.25,
+        -0.5
+      ],
+      "rotation": [
+        0.19509032201612825,
+        0,
+        0,
+        0.9807852804032304
+      ]
+    },
+    {
+      "node": 93,
+      "name": "cylinder",
+      "mesh": 93,
+      "material": 84,
+      "image": 80,
+      "translation": [
+        -0.09375,
+        0.25,
+        -0.5
+      ],
+      "rotation": [
+        0.19509032201612825,
+        0,
+        0,
+        0.9807852804032304
+      ]
+    },
+    {
+      "node": 94,
+      "name": "cylinder",
+      "mesh": 94,
+      "material": 85,
+      "image": 81,
+      "translation": [
+        0,
+        0.28125,
+        -0.46875
+      ],
+      "rotation": [
+        -0.3826834323650898,
+        0,
+        0,
+        0.9238795325112867
+      ]
+    }
+  ]
+}
