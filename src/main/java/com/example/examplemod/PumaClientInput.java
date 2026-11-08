@@ -1,6 +1,6 @@
 
 package com.example.examplemod;
-
+import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.TickEvent;
@@ -32,7 +32,13 @@ public class PumaClientInput {
         boolean driving =
                 minecraft.player.getVehicle() instanceof CaseIhPumaEntity;
 
-        if (driving) {
+        if (driving) {minecraft.player.displayClientMessage(
+        Component.literal(
+                "PUMA INPUT: " +
+                (minecraft.options.keyUp.isDown() ? "UP" : "NONE")
+        ),
+        true
+);
 
             // Tractor movement
             PumaNetwork.sendControls(

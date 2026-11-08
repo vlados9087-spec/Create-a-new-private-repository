@@ -104,9 +104,7 @@ public class PumaNetwork {
                     return;
                 }
 
-                if (player.getVehicle() instanceof CaseIhPumaEntity tractor
-                        && tractor.getControllingPassenger() == player) {
-
+                if (player.getVehicle() instanceof CaseIhPumaEntity tractor) {
                     tractor.setControls(
                             packet.forward,
                             packet.brake,

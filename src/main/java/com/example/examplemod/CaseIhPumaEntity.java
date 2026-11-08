@@ -88,6 +88,10 @@ public boolean isPushable() {
     return true;
 }
 
+@Override
+public boolean isPickable() {
+    return true;
+}
     // ---------------- DRIVER ----------------
 @Override
 protected boolean couldAcceptPassenger() {
@@ -104,6 +108,27 @@ protected boolean canAddPassenger(Entity passenger) {
         return 1.2D;
     }
 
+@Override
+public void positionRider(Entity passenger) {
+    if (this.hasPassenger(passenger)) {
+
+        double angle = Math.toRadians(this.getYRot());
+
+        double offsetForward = -0.5D;
+
+        double x = this.getX()
+                - Math.sin(angle) * offsetForward;
+
+        double y = this.getY()
+                + getPassengersRidingOffset()
+                + passenger.getMyRidingOffset();
+
+        double z = this.getZ()
+                + Math.cos(angle) * offsetForward;
+
+        passenger.setPos(x, y, z);
+    }
+}
     @Override
     public LivingEntity getControllingPassenger() {
         Entity passenger = getFirstPassenger();
@@ -113,28 +138,35 @@ protected boolean canAddPassenger(Entity passenger) {
     }
 
     @Override
-    public InteractionResult interact(Player player, InteractionHand hand) {
+public InteractionResult interact(Player player, InteractionHand hand) {
 
-        if (!this.level.isClientSide) {
-
-            // Sneak + right click = hitch interaction
-            if (player.isShiftKeyDown()) {
-
-                if (getHitchEntityId() != null) {
-                    detachImplement(player);
-                } else {
-                    attachNearestImplement(player);
-                }
-
-            } else if (getPassengers().isEmpty()) {
-
-                // Normal right click = enter tractor
-                player.startRiding(this);
-            }
-        }
-
-        return InteractionResult.sidedSuccess(this.level.isClientSide);
+    if (this.level.isClientSide) {
+        player.displayClientMessage(
+                Component.literal("PUMA CLICK DETECTED!"),
+                true
+        );
     }
+
+    if (!this.level.isClientSide) {
+
+        // Sneak + right click = hitch interaction
+        if (player.isShiftKeyDown()) {
+
+            if (getHitchEntityId() != null) {
+                detachImplement(player);
+            } else {
+                attachNearestImplement(player);
+            }
+
+        } else if (getPassengers().isEmpty()) {
+
+            // Normal right click = enter tractor
+            player.startRiding(this);
+        }
+    }
+
+    return InteractionResult.sidedSuccess(this.level.isClientSide);
+}
 
     // ---------------- CONTROLS ----------------
 
