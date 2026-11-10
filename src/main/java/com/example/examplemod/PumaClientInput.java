@@ -1,6 +1,7 @@
 
+
 package com.example.examplemod;
-import net.minecraft.network.chat.Component;
+
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.TickEvent;
@@ -32,21 +33,22 @@ public class PumaClientInput {
         boolean driving =
                 minecraft.player.getVehicle() instanceof CaseIhPumaEntity;
 
-        if (driving) {minecraft.player.displayClientMessage(
-        Component.literal(
-                "PUMA INPUT: " +
-                (minecraft.options.keyUp.isDown() ? "UP" : "NONE")
-        ),
-        true
-);
+        if (driving) {
 
             // Tractor movement
-            PumaNetwork.sendControls(
-                    minecraft.options.keyUp.isDown(),
-                    minecraft.options.keyDown.isDown(),
-                    minecraft.options.keyLeft.isDown(),
-                    minecraft.options.keyRight.isDown()
-            );
+          CaseIhPumaEntity tractor =
+        (CaseIhPumaEntity) minecraft.player.getVehicle();
+
+boolean forward = minecraft.options.keyUp.isDown();
+boolean brake = minecraft.options.keyDown.isDown();
+boolean left = minecraft.options.keyLeft.isDown();
+boolean right = minecraft.options.keyRight.isDown();
+
+// Local controls
+tractor.setControls(forward, brake, left, right);
+
+// Server controls
+PumaNetwork.sendControls(forward, brake, left, right);
 
             // Raise rear hitch with R
             while (PumaKeyBindings.HITCH_RAISE.consumeClick()) {
@@ -73,4 +75,3 @@ public class PumaClientInput {
         }
     }
 }
-

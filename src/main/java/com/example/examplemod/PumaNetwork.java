@@ -1,6 +1,6 @@
 
 package com.example.examplemod;
-
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -104,14 +104,27 @@ public class PumaNetwork {
                     return;
                 }
 
-                if (player.getVehicle() instanceof CaseIhPumaEntity tractor) {
-                    tractor.setControls(
-                            packet.forward,
-                            packet.brake,
-                            packet.left,
-                            packet.right
-                    );
-                }
+              if (player.getVehicle() instanceof CaseIhPumaEntity tractor) {
+
+    if (packet.forward) {
+        player.displayClientMessage(
+                Component.literal("SERVER: PUMA + W"), true
+        );
+    }
+
+    tractor.setControls(
+            packet.forward,
+            packet.brake,
+            packet.left,
+            packet.right
+    );
+
+} else if (packet.forward) {
+
+    player.displayClientMessage(
+            Component.literal("SERVER: NO PUMA VEHICLE"), true
+    );
+}
             });
 
             context.setPacketHandled(true);

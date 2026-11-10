@@ -182,18 +182,29 @@ public InteractionResult interact(Player player, InteractionHand hand) {
         this.rightInput = right;
     }
 
-    private void accelerate() {
+    private void accelerateForward() {
+    if (speed < 0) {
+        speed = Math.min(0, speed + 4);
+    } else {
         speed = Math.min(MAX_SPEED, speed + 2);
     }
+}
 
-    private void brake() {
+private void accelerateBackward() {
+    if (speed > 0) {
         speed = Math.max(0, speed - 4);
+    } else {
+        speed = Math.max(-MAX_SPEED, speed - 2);
     }
+}
 
-    private void slowDown() {
+private void slowDown() {
+    if (speed > 0) {
         speed = Math.max(0, speed - 1);
+    } else if (speed < 0) {
+        speed = Math.min(0, speed + 1);
     }
-
+}
     private void steer(float direction) {
         steering = Math.max(
                 -MAX_STEERING,
@@ -441,78 +452,88 @@ public InteractionResult interact(Player player, InteractionHand hand) {
 
     // ---------------- TICK ----------------
 
-    @Override
-    public void tick() {
-        super.tick();
-
-        if (this.level.isClientSide) {
-            return;
-        }
-
-        if (getControllingPassenger() == null) {
-
-            setControls(false, false, false, false);
-
-            speed = Math.max(0, speed - 2);
-            centerSteering();
-
-        } else {
-
-            if (brakeInput) {
-                brake();
-            } else if (forwardInput) {
-                accelerate();
-            } else {
-                slowDown();
-            }
-
-            if (leftInput && !rightInput) {
-                steer(1.0F);
-            } else if (rightInput && !leftInput) {
-                steer(-1.0F);
-            } else {
-                centerSteering();
-            }
-        }
-
-        float speedFactor = speed / 50.0F;
-
-        float turnFactor =
-                0.02F + (1.0F - speedFactor) * 0.08F;
-
-        if (speed > 0) {
-            setYRot(getYRot() + steering * turnFactor);
-        }
-
-        double radians = Math.toRadians(getYRot());
-
-        Vec3 direction = new Vec3(
-                -Math.sin(radians),
-                0,
-                Math.cos(radians)
-        );
-
-        double movementSpeed = speedFactor * 0.694;
-
-Vec3 velocity = getDeltaMovement();
-
-double verticalVelocity = isOnGround()
-        ? 0.0D
-        : Math.max(-3.92D, velocity.y - 0.08D);
-
-setDeltaMovement(new Vec3(
-        direction.x * movementSpeed,
-        verticalVelocity,
-        direction.z * movementSpeed
-));
-
-move(MoverType.SELF, getDeltaMovement());
-
     
 
-        // Keep attached equipment behind the tractor
+
+@Override
+public void tick() {
+    super.tick();
+
+    // Driver check
+    if (getControllingPassenger() == null) {
+        setControls(false, false, false, false);
+
+        if (speed > 0) {
+            speed = Math.max(0, speed - 2);
+        } else if (speed < 0) {
+            speed = Math.min(0, speed + 2);
+        }
+
+        centerSteering();
+
+    } else {
+
+        // Acceleration and reverse
+        if (forwardInput && !brakeInput) {
+            accelerateForward();
+        } else if (brakeInput && !forwardInput) {
+            accelerateBackward();
+        } else {
+            slowDown();
+        }
+
+        // Steering
+        if (leftInput && !rightInput) {
+            steer(-1.0F);
+        } else if (rightInput && !leftInput) {
+            steer(1.0F);
+        } else {
+            centerSteering();
+        }
+    }
+
+    // Turning
+    double speedFactor = Math.abs(speed) / 50.0D;
+
+    double turnFactor =
+            0.02D + (1.0D - speedFactor) * 0.08D;
+
+    if (speed != 0) {
+        setYRot(
+                getYRot()
+                + (float)(steering * turnFactor * Math.signum(speed))
+        );
+    }
+
+    // Direction
+    double radians = Math.toRadians(getYRot());
+
+    Vec3 direction = new Vec3(
+            -Math.sin(radians),
+            0,
+            Math.cos(radians)
+    );
+
+    // Movement with block collision
+    double movementSpeed = (speed / 50.0D) * 0.694D;
+
+    move(
+            MoverType.SELF,
+            new Vec3(
+                    direction.x * movementSpeed,
+                    0,
+                    direction.z * movementSpeed
+            )
+    );
+
+    setDeltaMovement(Vec3.ZERO);
+
+   
+    // Update attached equipment
+    if (!this.level.isClientSide) {
         updateAttachedImplement();
     }
+}
 
     // ---------------- SPAWN PACKET ----------------
 
