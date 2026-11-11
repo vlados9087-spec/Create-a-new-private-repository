@@ -32,7 +32,7 @@ public class CaseIhPumaEntity extends Entity {
 
     private int speed = 0;
     private static final int MAX_SPEED = 50;
-
+    private double verticalSpeed = 0.0D;
     private float steering = 0.0F;
     private static final float MAX_STEERING = 35.0F;
     private static final float TURN_SPEED = 2.0F;
@@ -76,6 +76,7 @@ public class CaseIhPumaEntity extends Entity {
     ) {
         super(type, level);this.blocksBuilding = true;
         setNoGravity(true);
+        setMaxUpStep(1.0F);
     }
 
     @Override
@@ -514,19 +515,35 @@ public void tick() {
             Math.cos(radians)
     );
 
-    // Movement with block collision
-    double movementSpeed = (speed / 50.0D) * 0.694D;
+    // Movement with block collision and hill climbing
+double movementSpeed = (speed / 50.0D) * 0.694D;
 
-    move(
-            MoverType.SELF,
-            new Vec3(
-                    direction.x * movementSpeed,
-                    0,
-                    direction.z * movementSpeed
-            )
+// Gravity and ground contact
+if (this.isOnGround()) {
+    verticalSpeed = -0.08D;
+} else {
+    verticalSpeed = Math.max(
+            verticalSpeed - 0.08D,
+            -0.6D
     );
+}
 
-    setDeltaMovement(Vec3.ZERO);
+// Move tractor
+move(
+        MoverType.SELF,
+        new Vec3(
+                direction.x * movementSpeed,
+                verticalSpeed,
+                direction.z * movementSpeed
+        )
+);
+
+// Stop vertical movement after collision
+if (this.verticalCollision) {
+    verticalSpeed = 0.0D;
+}
+
+setDeltaMovement(Vec3.ZERO);
 
    
     // Update attached equipment
